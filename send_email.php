@@ -4,7 +4,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $email = filter_var($_POST["email"], FILTER_SANITIZE_EMAIL);
     $messaggio = htmlspecialchars($_POST["messaggio"]);
 
-    $destinatario = "tuo@email.com"; // Sostituisci con il tuo indirizzo email
+    $destinatario = "lucascalera1vr@gmail.com";
     $oggetto = "Nuovo Messaggio dal Portfolio di Luca Scalera";
     
     $corpo_email = "Hai ricevuto un nuovo messaggio dal modulo contatti.\n\n";
