@@ -90,23 +90,20 @@
     </section>
 
     <!-- Sezione Contatti -->
-    <section id="contatti" class="section">
-        <div class="container">
-            <h2>Contattami</h2>
-            <form action="send_email.php" method="post">
-                <label for="nome">Nome:</label>
-                <input type="text" id="nome" name="nome" required><br>
+    <form action="https://formsubmit.co/tuo@email.com" method="POST">
+        <input type="hidden" name="_captcha" value="false">
+        <label for="nome">Nome:</label>
+        <input type="text" id="nome" name="name" required><br>
     
-                <label for="email">Email:</label>
-                <input type="email" id="email" name="email" required><br>
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required><br>
     
-                <label for="messaggio">Messaggio:</label><br>
-                <textarea id="messaggio" name="messaggio" required></textarea><br>
+        <label for="messaggio">Messaggio:</label><br>
+        <textarea id="messaggio" name="message" required></textarea><br>
     
-                <button type="submit" class="btn">Invia</button>
-            </form>
-        </div>
-    </section>    
+        <button type="submit" class="btn">Invia</button>
+    </form>
+     
 
     <!-- Footer -->
     <footer>
