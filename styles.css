@@ -141,9 +141,11 @@ footer {
     background-color: #333;
     color: white;
     text-align: center;
-    padding: 10px; /* Ridotto il padding per un footer più piccolo */
-    border-radius: 15px 15px 0 0; /* Applica il border-radius solo in alto (angoli superiore sinistro e superiore destro) */
+    padding: 5px; /* Ancora più ridotto il padding */
+    font-size: 0.9em; /* Font più piccolo */
+    border-radius: 15px 15px 0 0; /* Angoli arrotondati solo sopra */
     width: 100%;
-    margin-top: auto; /* Assicura che il footer rimanga in fondo alla pagina */
+    margin-top: auto; /* Mantiene il footer in basso */
 }
+
 
