@@ -142,7 +142,8 @@ footer {
     color: white;
     text-align: center;
     padding: 20px;
-    border-radius: 15px;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
     width: 100%;
     margin-top: auto; /* Questo fa sì che il footer sia spinto in fondo */
 }
