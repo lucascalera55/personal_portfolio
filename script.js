@@ -18,20 +18,7 @@ document.addEventListener("DOMContentLoaded", function () {
   const form = document.querySelector("form");
 
   form.addEventListener("submit", function (event) {
-    event.preventDefault(); // Prevenire il comportamento predefinito del form
     // Visualizza il messaggio di conferma
     alert("Messaggio inviato con successo!");
-    form.reset(); // Reset del modulo dopo l'invio
-  });
-
-  // Gestione della barra di navigazione al cambio di scroll
-  const navbar = document.querySelector(".navbar");
-
-  window.addEventListener("scroll", function () {
-    if (window.scrollY > 50) {
-      navbar.classList.add("scrolled");
-    } else {
-      navbar.classList.remove("scrolled");
-    }
   });
 });

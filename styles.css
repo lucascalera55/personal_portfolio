@@ -1,25 +1,16 @@
-/* Variabili CSS */
-:root {
-    --primary-color: #333;
-    --secondary-color: #575757;
-    --highlight-color: #f4f4f4;
-    --button-color: #333;
-    --button-hover-color: #575757;
-}
-
 /* Generali */
 html, body {
-    height: 100%;
+    height: 100%; /* Altezza a 100% per la pagina */
     margin: 0;
     padding: 0;
     line-height: 1.2;
     color: #333;
-    background-color: var(--highlight-color);
+    background-color: #f4f4f4;
     display: flex;
     flex-direction: column;
-    width: 100%;
-    overflow-x: hidden;
-    font-size: 16px;
+    width: 100%; /* Rende il body flessibile */
+    overflow-x: hidden; /* Evita lo scrolling orizzontale */
+    font-size: 16px; /* Imposta una base di font normale */
 }
 
 /* Barra di navigazione */
@@ -58,13 +49,13 @@ nav ul li a {
 }
 
 nav ul li a:hover {
-    background-color: var(--secondary-color);
+    background-color: #575757;
 }
 
 /* Sezioni */
 .section {
     padding: 60px 20px;
-    max-width: 100%;
+    max-width: 100%; /* Rende la sezione flessibile a tutto schermo */
     margin: 0 auto;
     opacity: 0;
     transform: translateY(30px);
@@ -78,7 +69,7 @@ nav ul li a:hover {
 
 /* Header */
 header {
-    background: var(--primary-color);
+    background: #333;
     color: white;
     padding: 60px 20px;
     text-align: center;
@@ -88,16 +79,16 @@ header h1 {
     font-size: 2.5em;
 }
 
-/* Competenze */
+/* Skills */
 .skills {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Adatta automaticamente la larghezza */
     gap: 20px;
-    font-size: 1.1em;
+    font-size: 1.2em;
 }
 
 .skill-item {
-    background: var(--primary-color);
+    background: #333;
     color: white;
     padding: 15px;
     border-radius: 8px;
@@ -120,7 +111,7 @@ header h1 {
     text-align: center;
     margin-top: 10px;
     font-size: 1.1em;
-    color: var(--primary-color);
+    color: #333;
 }
 
 /* Modulo Contatti */
@@ -134,7 +125,7 @@ form textarea {
 }
 
 form button {
-    background-color: var(--primary-color);
+    background-color: #333;
     color: white;
     padding: 10px 20px;
     border: none;
@@ -143,12 +134,12 @@ form button {
 }
 
 form button:hover {
-    background-color: var(--secondary-color);
+    background-color: #575757;
 }
 
 /* Footer */
 footer {
-    background-color: var(--primary-color);
+    background-color: #333;
     color: white;
     text-align: center;
     padding: 10px;
@@ -160,38 +151,23 @@ footer {
 /* Media Queries per dispositivi mobili */
 @media (max-width: 768px) {
     header h1 {
-        font-size: 1.8em;
+        font-size: 1.8em; /* Riduci la dimensione del font nei dispositivi mobili */
     }
 
     .skills {
-        grid-template-columns: 1fr 1fr;
+        grid-template-columns: 1fr 1fr; /* 2 colonne su schermi più piccoli */
     }
 
     .section {
-        padding: 40px 15px;
+        padding: 40px 15px; /* Riduci il padding su schermi piccoli */
     }
 
     form input,
     form textarea {
-        padding: 8px;
+        padding: 8px; /* Riduci il padding sui campi del modulo */
     }
 
     footer {
-        padding: 8px;
-    }
-}
-
-@media (max-width: 480px) {
-    .section {
-        padding: 30px 10px;
-    }
-    
-    form input,
-    form textarea {
-        padding: 12px;
-    }
-
-    footer {
-        font-size: 0.9em;
+        padding: 8px; /* Riduci il padding nel footer */
     }
 }
