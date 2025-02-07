@@ -8,7 +8,7 @@ body {
     background-color: #f4f4f4;
     display: flex; /* Usare flexbox per gestire il layout */
     flex-direction: column;
-    min-height: 100vh; /* Impostare altezza minima a 100vh per coprire tutto lo schermo */
+    height: 100%; /* Altezza al 100% per il contenitore principale */
 }
 
 /* Barra di navigazione */
@@ -58,9 +58,9 @@ nav ul li a:hover {
     opacity: 0;
     transform: translateY(30px);
     transition: opacity 0.6s ease-in-out, transform 0.6s ease-in-out;
-    flex-grow: 1; /* Consente alle sezioni di espandersi e riempire lo spazio disponibile */
 }
 
+/* Le sezioni diventeranno visibili quando vengono scorse */
 .section.visible {
     opacity: 1;
     transform: translateY(0);
@@ -144,6 +144,5 @@ footer {
     padding: 20px;
     border-radius: 15px;
     width: 100%;
-    position: relative;
     margin-top: auto; /* Questo fa sì che il footer sia spinto in fondo */
 }
