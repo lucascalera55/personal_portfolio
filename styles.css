@@ -1,19 +1,14 @@
-/* Reset di base */
-* {
+/* Generali */
+body {
+    font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
-    scroll-behavior: smooth;
-}
-
-body {
-    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
     color: #333;
     background-color: #f4f4f4;
-    line-height: 1.6;
 }
 
-/* Navbar fissa con effetto trasparente */
+/* Barra di navigazione */
 .navbar {
     position: fixed;
     top: 0;
@@ -22,44 +17,33 @@ body {
     backdrop-filter: blur(5px);
     padding: 15px 0;
     z-index: 1000;
-    transition: background 0.3s;
+    transition: background 0.3s ease, box-shadow 0.3s ease;
 }
 
-.navbar ul {
+.navbar.scrolled {
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+nav ul {
     display: flex;
     justify-content: center;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
     list-style: none;
 }
 
-.navbar ul li {
-    margin: 0 15px;
-}
-
-.navbar ul li a {
+nav ul li a {
     color: white;
     text-decoration: none;
     padding: 10px 20px;
-    font-weight: bold;
-    transition: all 0.3s ease-in-out;
+    display: block;
 }
 
-.navbar ul li a:hover {
-    background: white;
-    color: black;
-    border-radius: 5px;
-}
-
-/* Hero */
-.hero {
-    background: linear-gradient(to right, #333, #575757);
-    color: white;
-    text-align: center;
-    padding: 80px 20px;
-    margin-top: 60px;
-}
-
-.hero h1 {
-    font-size: 2.5em;
+nav ul li a:hover {
+    background-color: #575757;
 }
 
 /* Sezioni */
@@ -69,7 +53,7 @@ body {
     margin: auto;
     opacity: 0;
     transform: translateY(30px);
-    transition: all 0.6s ease-in-out;
+    transition: opacity 0.6s ease-in-out, transform 0.6s ease-in-out;
 }
 
 .section.visible {
@@ -77,56 +61,24 @@ body {
     transform: translateY(0);
 }
 
-.bg-light {
-    background-color: #f9f9f9;
-}
-
-/* Contenitore */
-.container {
-    width: 90%;
-    margin: auto;
-}
-
-/* Titoli */
-h2 {
-    font-size: 2em;
-    margin-bottom: 20px;
-    color: #333;
+/* Header */
+header {
+    background: #333;
+    color: white;
+    padding: 60px 20px;
     text-align: center;
 }
 
-/* Curriculum */
-.curriculum-embed iframe {
-    width: 100%;
-    max-width: 800px;
-    height: 400px;
-    border-radius: 8px;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
-    margin: 20px auto;
-    display: block;
+header h1 {
+    font-size: 2.5em;
 }
 
-.curriculum-embed a {
-    display: block;
-    text-align: center;
-    margin-top: 10px;
-    font-size: 1.1em;
-    color: #007bff;
-    font-weight: bold;
-    text-decoration: none;
-}
-
-.curriculum-embed a:hover {
-    text-decoration: underline;
-}
-
-/* Competenze */
+/* Skills */
 .skills {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    gap: 15px;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
     font-size: 1.2em;
-    margin-top: 20px;
 }
 
 .skill-item {
@@ -135,38 +87,28 @@ h2 {
     padding: 15px;
     border-radius: 8px;
     text-align: center;
-    transition: transform 0.3s ease-in-out;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 10px;
 }
 
-.skill-item i {
-    font-size: 1.5em;
+/* Curriculum Embed */
+.curriculum-embed iframe {
+    width: 80%;
+    max-width: 900px;
+    height: 400px;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(63, 69, 81, 0.16);
+    margin: 0 auto;
+    display: block;
 }
 
-.skill-item:hover {
-    transform: scale(1.05);
-    background: #575757;
+.curriculum-embed a {
+    display: block;
+    text-align: center;
+    margin-top: 10px;
+    font-size: 1.1em;
+    color: #333;
 }
 
 /* Modulo Contatti */
-form {
-    background: white;
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
-    max-width: 500px;
-    margin: auto;
-}
-
-form label {
-    font-weight: bold;
-    display: block;
-    margin-top: 10px;
-}
-
 form input,
 form textarea {
     width: 100%;
@@ -174,12 +116,6 @@ form textarea {
     margin: 10px 0;
     border-radius: 4px;
     border: 1px solid #ddd;
-    font-size: 1em;
-}
-
-form textarea {
-    height: 150px;
-    resize: none;
 }
 
 form button {
@@ -189,9 +125,6 @@ form button {
     border: none;
     cursor: pointer;
     border-radius: 4px;
-    font-size: 1em;
-    transition: background 0.3s ease-in-out;
-    width: 100%;
 }
 
 form button:hover {
@@ -202,27 +135,4 @@ form button:hover {
 footer {
     background-color: #333;
     color: white;
-    text-align: center;
-    padding: 20px 0;
-    margin-top: 30px;
-}
-
-/* Media Query per Mobile */
-@media (max-width: 768px) {
-    .navbar ul {
-        flex-direction: column;
-        text-align: center;
-    }
-
-    .navbar ul li {
-        margin-bottom: 10px;
-    }
-
-    .hero h1 {
-        font-size: 2em;
-    }
-
-    .skills {
-        grid-template-columns: 1fr;
-    }
 }
