@@ -1,140 +1,112 @@
+/* Reset generale */
 body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    line-height: 1.6;
     color: #333;
     background-color: #f4f4f4;
 }
 
-/* Barra di navigazione fissa */
-nav {
+/* Navbar fissa */
+.navbar {
     position: fixed;
     top: 0;
     width: 100%;
-    background-color: #333;
+    background: rgba(51, 51, 51, 0.9);
+    backdrop-filter: blur(5px);
+    padding: 15px 0;
     z-index: 1000;
 }
 
-nav ul {
+.navbar ul {
     display: flex;
     justify-content: center;
-    padding: 10px;
+    padding: 0;
     margin: 0;
+}
+
+.navbar ul li {
     list-style: none;
 }
 
-nav ul li {
-    list-style: none;
-}
-
-nav ul li a {
+.navbar ul li a {
     color: white;
     text-decoration: none;
     padding: 10px 20px;
-    display: block;
+    transition: color 0.3s, background 0.3s;
+    font-weight: bold;
 }
 
-nav ul li a:hover {
-    background-color: #575757;
+.navbar ul li a:hover {
+    background: white;
+    color: black;
+    border-radius: 5px;
 }
 
-/* Aggiusta il padding superiore per evitare che il contenuto venga nascosto dietro la barra di navigazione */
-body {
-    padding-top: 50px;
-}
-
-
-/* Header */
-header {
-    background: #333;
+/* Header Hero */
+.hero {
+    background: linear-gradient(to right, #141e30, #243b55);
     color: white;
-    padding: 60px 20px;
+    padding: 100px 20px;
     text-align: center;
+    margin-top: 60px;
 }
 
-header h1 {
+.hero h1 {
     font-size: 2.5em;
 }
 
 /* Sezioni */
 .section {
-    padding: 40px 20px;
-    margin: 0 auto;
-    max-width: 1200px;
-}
-
-.bg-light {
-    background-color: #f9f9f9;
-}
-
-.container {
-    width: 90%;
-    margin: 0 auto;
-}
-
-h2 {
-    font-size: 2em;
-    margin-bottom: 20px;
-    color: #333;
-}
-
-.curriculum-item {
-    margin-bottom: 20px;
-}
-
-.curriculum-item h3 {
-    font-size: 1.5em;
-    margin-bottom: 10px;
-}
-
-.curriculum-item ul {
-    list-style-type: none;
-    padding: 0;
-}
-
-.curriculum-item ul li {
-    font-size: 1.1em;
-    margin-bottom: 5px;
-}
-
-/* Curriculum Embed */
-.curriculum-embed iframe {
-    width: 80%;
+    padding: 50px 20px;
     max-width: 900px;
-    height: 400px;
-    border-radius: 8px;
-    box-shadow: 0 2px 8px rgba(63, 69, 81, 0.16);
-    margin: 0 auto;
-    display: block;
+    margin: auto;
+    opacity: 0;
+    transform: translateY(30px);
+    transition: all 0.6s ease-in-out;
 }
 
-/* Margin per il link */
-.curriculum-embed a {
-    display: block;
-    text-align: center;
-    margin-top: 10px;
-    font-size: 1.1em;
-    color: #333;
+.section.visible {
+    opacity: 1;
+    transform: translateY(0);
 }
 
 /* Competenze */
 .skills {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 20px;
-    font-size: 1.2em;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    justify-content: center;
 }
 
 .skill-item {
-    background: #333;
+    background: linear-gradient(to right, #1f4037, #99f2c8);
     color: white;
     padding: 15px;
     border-radius: 8px;
     text-align: center;
+    font-size: 1.2em;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    transition: transform 0.3s;
 }
 
-/* Contatti */
+.skill-item:hover {
+    transform: scale(1.1);
+}
+
+/* Form contatti */
+form {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 500px;
+    margin: auto;
+}
+
 form input,
 form textarea {
     width: 100%;
@@ -145,16 +117,17 @@ form textarea {
 }
 
 form button {
-    background-color: #333;
+    background: linear-gradient(to right, #1f4037, #99f2c8);
     color: white;
     padding: 10px 20px;
     border: none;
     cursor: pointer;
     border-radius: 4px;
+    transition: transform 0.3s;
 }
 
 form button:hover {
-    background-color: #575757;
+    transform: scale(1.05);
 }
 
 /* Footer */

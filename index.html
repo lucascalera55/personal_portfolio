@@ -5,8 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portfolio Sistemista - Luca Scalera</title>
     <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
 </head>
 <body>
+
     <!-- Barra di navigazione -->
     <nav class="navbar">
         <ul>
@@ -29,7 +31,6 @@
     <section id="esperienza" class="section">
         <div class="container">
             <h2>Esperienza Lavorativa</h2>
-            <p>Esplora la mia esperienza nella gestione di infrastrutture IT moderne e scalabili.</p>
             <ul>
                 <li><strong>2020 - Presente:</strong> Ingegnere Sistemista presso XYZ Srl</li>
                 <li><strong>2018 - 2020:</strong> Supporto IT presso ABC SpA</li>
@@ -38,81 +39,42 @@
         </div>
     </section>
 
-    <!-- Sezione Curriculum -->
-    <section id="curriculum" class="section bg-light">
-        <div class="container">
-            <h2>Il mio Curriculum</h2>
-            <p>Un riassunto delle esperienze professionali, delle competenze e della formazione che mi hanno reso un esperto sistemista.</p>
-            <div class="curriculum">
-                <div class="curriculum-item">
-                    <h3>Formazione</h3>
-                    <ul>
-                        <li>Laurea in Informatica - Università XYZ (Anno)</li>
-                        <li>Master in Gestione Infrastrutture IT - Università ABC (Anno)</li>
-                    </ul>
-                </div>
-                <div class="curriculum-item">
-                    <h3>Certificazioni</h3>
-                    <ul>
-                        <li>Certificazione CompTIA Network+ (Anno)</li>
-                        <li>Certificazione Microsoft Certified Solutions Expert (Anno)</li>
-                    </ul>
-                </div>
-            </div>
-
-            <!-- Curriculum Embeddato -->
-            <div class="curriculum-embed">
-                <iframe loading="lazy" src="https://www.canva.com/design/DAGEcuwmzgI/wWIEWkkC8DIPVPk6e6fhXg/view?embed" allowfullscreen="allowfullscreen"></iframe>
-            </div>
-            <a href="https://www.canva.com/design/DAGEcuwmzgI/wWIEWkkC8DIPVPk6e6fhXg/view?utm_content=DAGEcuwmzgI&utm_campaign=designshare&utm_medium=embeds&utm_source=link" target="_blank" rel="noopener"> Curriculum Vitae Scalera Luca</a>
-        </div>
-    </section>
-
     <!-- Sezione Competenze -->
     <section id="competenze" class="section">
         <div class="container">
             <h2>Competenze Tecniche</h2>
             <div class="skills">
-                <div class="skill-item">Gestione Server Linux</div>
-                <div class="skill-item">Amministrazione Reti</div>
-                <div class="skill-item">Sicurezza Informatica</div>
-                <div class="skill-item">Automazione dei Processi IT</div>
+                <div class="skill-item"><i class="fas fa-server"></i> Gestione Server Linux</div>
+                <div class="skill-item"><i class="fas fa-network-wired"></i> Amministrazione Reti</div>
+                <div class="skill-item"><i class="fas fa-shield-alt"></i> Sicurezza Informatica</div>
+                <div class="skill-item"><i class="fas fa-cogs"></i> Automazione IT</div>
             </div>
         </div>
     </section>
 
-    <!-- Sezione Informazioni Personali -->
-    <section id="informazioni" class="section bg-light">
+    <!-- Sezione Contatti -->
+    <section id="contatti" class="section">
         <div class="container">
-            <h2>Informazioni Personali</h2>
-            <p>Mi chiamo Luca Scalera, sono un sistemista appassionato di tecnologia, automazione e sicurezza. Mi occupo di progettare e gestire infrastrutture IT sicure ed efficienti. Sempre alla ricerca di nuove sfide nel mondo dell'IT, ho esperienza sia in ambito hardware che software.</p>
+            <h2>Contattami</h2>
+            <form action="https://formsubmit.co/tuaemail@email.com" method="POST">
+                <input type="hidden" name="_captcha" value="false">
+                <label for="nome">Nome:</label>
+                <input type="text" id="nome" name="nome" required>
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+                <label for="messaggio">Messaggio:</label>
+                <textarea id="messaggio" name="messaggio" required></textarea>
+                <button type="submit">Invia</button>
+            </form>
         </div>
     </section>
 
-    <!-- Sezione Contatti -->
-    <form action="https://formsubmit.co/lucascalera1vr@gmail.com" method="POST">
-        <input type="hidden" name="_captcha" value="false">
-        <label for="nome">Nome:</label>
-        <input type="text" id="nome" name="name" required><br>
-    
-        <label for="email">Email:</label>
-        <input type="email" id="email" name="email" required><br>
-    
-        <label for="messaggio">Messaggio:</label><br>
-        <textarea id="messaggio" name="message" required></textarea><br>
-    
-        <button type="submit" class="btn">Invia</button>
-        <input type="hidden" name="_captcha" value="false">
-        <input type="hidden" name="_next" value="https://lucascalera55.github.io/mio_sito/">
-
-    </form>
-     
-
     <!-- Footer -->
     <footer>
-        <div class="container">
-            <p>&copy; 2025 Portfolio Sistemista. Tutti i diritti riservati.</p>
-        </div>
+        <p>&copy; 2025 Portfolio Sistemista. Tutti i diritti riservati.</p>
     </footer>
+
+    <script src="script.js"></script>
+
 </body>
 </html>
