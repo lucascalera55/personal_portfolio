@@ -1,14 +1,13 @@
 /* Generali */
-body {
-    font-family: Arial, sans-serif;
+html, body {
+    height: 100%; /* Altezza a 100% per la pagina */
     margin: 0;
     padding: 0;
     line-height: 1.2;
     color: #333;
     background-color: #f4f4f4;
-    display: flex; /* Usare flexbox per gestire il layout */
+    display: flex;
     flex-direction: column;
-    height: 100%; /* Altezza al 100% per il contenitore principale */
 }
 
 /* Barra di navigazione */
@@ -53,14 +52,13 @@ nav ul li a:hover {
 /* Sezioni */
 .section {
     padding: 60px 20px;
-    max-width: 900px;
-    margin: auto;
+    max-width: 1200px; /* Aumenta la larghezza massima per una sezione più grande */
+    margin: 0 auto;
     opacity: 0;
     transform: translateY(30px);
     transition: opacity 0.6s ease-in-out, transform 0.6s ease-in-out;
 }
 
-/* Le sezioni diventeranno visibili quando vengono scorse */
 .section.visible {
     opacity: 1;
     transform: translateY(0);
@@ -141,11 +139,8 @@ footer {
     background-color: #333;
     color: white;
     text-align: center;
-    padding: 5px; /* Ancora più ridotto il padding */
-    font-size: 0.9em; /* Font più piccolo */
-    border-radius: 15px 15px 0 0; /* Angoli arrotondati solo sopra */
+    padding: 10px;
+    border-radius: 15px 15px 0 0;
     width: 100%;
-    margin-top: auto; /* Mantiene il footer in basso */
+    margin-top: auto;
 }
-
-
