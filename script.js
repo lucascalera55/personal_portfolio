@@ -1,4 +1,5 @@
 document.addEventListener("DOMContentLoaded", function () {
+  // Funzione per rendere visibili le sezioni durante lo scroll
   const sections = document.querySelectorAll(".section");
 
   function revealSections() {
@@ -11,10 +12,9 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 
   window.addEventListener("scroll", revealSections);
-  revealSections();
-});
+  revealSections(); // Assicura che le sezioni vengano visibili anche se sono già in vista al caricamento
 
-document.addEventListener("DOMContentLoaded", function () {
+  // Funzione per la conferma del messaggio inviato
   const form = document.querySelector("form");
 
   form.addEventListener("submit", function (event) {
