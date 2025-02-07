@@ -6,8 +6,6 @@ body {
     line-height: 1.2;
     color: #333;
     background-color: #f4f4f4;
-    min-height: 100vh;
-    display: flex;
     flex-direction: column;
 }
 
