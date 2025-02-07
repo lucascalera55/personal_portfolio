@@ -8,12 +8,21 @@ body {
 }
 
 /* Barra di navigazione */
+/* Barra di navigazione fissa */
+nav {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: #333;
+    z-index: 1000;
+}
+
 nav ul {
     display: flex;
     justify-content: center;
-    background-color: #333;
     padding: 10px;
     margin: 0;
+    list-style: none;
 }
 
 nav ul li {
@@ -30,6 +39,12 @@ nav ul li a {
 nav ul li a:hover {
     background-color: #575757;
 }
+
+/* Aggiusta il padding superiore per evitare che il contenuto venga nascosto dietro la barra di navigazione */
+body {
+    padding-top: 50px;
+}
+
 
 /* Header */
 header {
