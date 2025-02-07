@@ -1,5 +1,4 @@
 document.addEventListener("DOMContentLoaded", function () {
-  // Funzionalità di rivelazione delle sezioni durante lo scroll
   const sections = document.querySelectorAll(".section");
 
   function revealSections() {
@@ -13,8 +12,9 @@ document.addEventListener("DOMContentLoaded", function () {
 
   window.addEventListener("scroll", revealSections);
   revealSections();
+});
 
-  // Funzionalità di conferma invio del modulo
+document.addEventListener("DOMContentLoaded", function () {
   const form = document.querySelector("form");
 
   form.addEventListener("submit", function (event) {
