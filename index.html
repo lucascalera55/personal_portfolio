@@ -1,118 +1,664 @@
 <!DOCTYPE html>
-<html lang="it">
+<html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio Sistemista - Luca Scalera</title>
-    <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Personal Portfolio</title>
+
+  <!--
+    - favicon
+  -->
+  <link rel="shortcut icon" href="./assets/images/logo.ico" type="image/x-icon">
+
+  <!--
+    - custom css link
+  -->
+  <link rel="stylesheet" href="./assets/css/style.css">
+
+  <!--
+    - google font link
+  -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
 </head>
+
 <body>
 
-    <!-- Barra di navigazione -->
-    <nav class="navbar">
-        <ul>
-            <li><a href="#esperienza">Esperienza</a></li>
-            <li><a href="#curriculum">Curriculum</a></li>
-            <li><a href="#competenze">Competenze</a></li>
-            <li><a href="#informazioni">Informazioni</a></li>
-            <li><a href="#contatti">Contatti</a></li>
+  <!--
+    - #MAIN
+  -->
+
+  <main>
+
+    <!--
+      - #SIDEBAR
+    -->
+
+    <aside class="sidebar" data-sidebar>
+
+      <div class="sidebar-info">
+
+        <figure class="avatar-box">
+          <img src="./assets/images/my-avatar.png" alt="Luca Scalera" width="80">
+        </figure>
+
+        <div class="info-content">
+          <h1 class="name" title="Luca Scalera">Luca Scalera</h1>
+
+          <p class="title">Aspiring</p>
+        </div>
+
+        <button class="info_more-btn" data-sidebar-btn>
+          <span>Show Contacts</span>
+
+          <ion-icon name="chevron-down"></ion-icon>
+        </button>
+
+      </div>
+
+      <div class="sidebar-info_more">
+
+        <div class="separator"></div>
+
+        <ul class="contacts-list">
+
+          <li class="contact-item">
+
+            <div class="icon-box">
+              <ion-icon name="mail-outline"></ion-icon>
+            </div>
+
+            <div class="contact-info">
+              <p class="contact-title">Email</p>
+
+              <a href="mailto:lucascalera1vr@gmail.com" class="contact-link">lucascalera1vr@gmail.com</a>
+            </div>
+
+          </li>
+
+          <li class="contact-item">
+
+            <div class="icon-box">
+              <ion-icon name="phone-portrait-outline"></ion-icon>
+            </div>
+
+            <div class="contact-info">
+              <p class="contact-title">Telefono</p>
+
+              <a href="tel:+393892680373" class="contact-link">+39 389 268 0373</a>
+            </div>
+
+          </li>
+
+          <li class="contact-item">
+
+            <div class="icon-box">
+              <ion-icon name="calendar-outline"></ion-icon>
+            </div>
+
+            <div class="contact-info">
+              <p class="contact-title">Data di nascita</p>
+
+              <time>02/06/2005</time>
+            </div>
+
+          </li>
+
+          <li class="contact-item">
+
+            <div class="icon-box">
+              <ion-icon name="location-outline"></ion-icon>
+            </div>
+
+            <div class="contact-info">
+              <p class="contact-title">Indirizzo</p>
+
+              <address>Colognola ai Colli, 37030, Verona</address>
+            </div>
+
+          </li>
+
         </ul>
-    </nav>
 
-    <!-- Header -->
-    <header class="hero">
-        <div class="container">
-            <h1>Benvenuto nel mio Portfolio - Luca Scalera</h1>
+        <div class="separator"></div>
+
+        <ul class="social-list">
+
+          <li class="social-item">
+            <a href="https://github.com/lucascalera55/ class="social-link">
+              <ion-icon name="logo-github"></ion-icon>
+            </a>
+          </li>
+
+          <li class="social-item">
+            <a href="https://www.linkedin.com/in/luca-scalera-40a948337/" class="social-link">
+              <ion-icon name="logo-Linkedin"></ion-icon>
+            </a>
+          </li>
+
+          </ul>
+
+      </div>
+
+    </aside>
+
+
+
+
+
+    <!--
+      - #main-content
+    -->
+
+    <div class="main-content">
+
+      <!--
+        - #NAVBAR
+      -->
+
+      <nav class="navbar">
+
+        <ul class="navbar-list">
+
+          <li class="navbar-item">
+            <button class="navbar-link  active" data-nav-link>About</button>
+          </li>
+
+          <li class="navbar-item">
+            <button class="navbar-link" data-nav-link>Resume</button>
+          </li>
+
+          <li class="navbar-item">
+            <button class="navbar-link" data-nav-link>Portfolio</button>
+          </li>
+
+          <li class="navbar-item">
+            <button class="navbar-link" data-nav-link>Contact</button>
+          </li>
+
+        </ul>
+
+      </nav>
+
+
+
+
+
+      <!--
+        - #ABOUT
+      -->
+
+      <article class="about  active" data-page="about">
+
+        <header>
+          <h2 class="h2 article-title">About me</h2>
+        </header>
+
+        <section class="about-text">
+          <p>
+            Mi chiamo Luca, ho 19 anni e sono sempre stato appassionato di informatica sin da bambino.
+          </p>
+
+          <p>
+            Mi sono diplomato in informatica. Successivamente, ho deciso di intraprendere un corso ITS su System Administrator presso l'ITS Academy LAST.
+          </p>
+        </section>
+
+        <!--
+          - service
+        -->
+
+        <section class="service">
+
+          <h3 class="h3 service-title">What i'm doing</h3>
+
+          <ul class="service-list">
+
+            <li class="service-item">
+
+              <div class="service-icon-box">
+                <img src="./assets/images/icon-dev.svg
+                " alt="design icon" width="40">
+              </div>
+
+              <div class="service-content-box">
+                <h4 class="h4 service-item-title">Backend Development</h4>
+
+                <p class="service-item-text">
+                  Sto creando il mio primo progetto. Un ERP utilizzando Java/Spring per il backend e collegamento con Database.
+                </p>
+              </div>
+
+            </li>
+
+            <li class="service-item">
+
+              <div class="service-icon-de">
+                <img src="./assets/images/icon-design.svg" alt="Web development icon" width="40">
+              </div>
+
+              <div class="service-content-box">
+                <h4 class="h4 service-item-title">System Administration</h4>
+
+                <p class="service-item-text">
+                  Sto imparando a utilizzare linux, docker e altre tecnologie per gestire varie infrastrutture. 
+                </p>
+              </div>
+
+            </li>
+            <li class="service-item">
+
+              <div class="service-icon-box">
+                <img src="./assets/images/icon-photo.svg" alt="Web development icon" width="40">
+              </div>
+
+              <div class="service-content-box">
+                <h4 class="h4 service-item-title">Business</h4>
+
+                <p class="service-item-text">
+                  Ho appena iniziato un attività di rivendita di prodotti vari, dalla tecnologia a attrezzi da giardino.
+                </p>
+              </div>
+
+            </li>
+            <li class="service-item">
+
+              <div class="service-icon-box">
+                <img src="./assets/images/icon-quote.svg" alt="Web development icon" width="40">
+              </div>
+
+              <div class="service-content-box">
+                <h4 class="h4 service-item-title">Video Games</h4>
+
+                <p class="service-item-text">
+                  Gioco a vari video games da anni che mi hanno permesso di svillupare un problem solving efficace. 
+                </p>
+              </div>
+
+            </li>
+
+          </ul>
+
+        </section>
+
+
+        <!--
+          - testimonials modal
+        -->
+
+        <div class="modal-container" data-modal-container>
+
+          <div class="overlay" data-overlay></div>
+
+          <section class="testimonials-modal">
+
+            <button class="modal-close-btn" data-modal-close-btn>
+              <ion-icon name="close-outline"></ion-icon>
+            </button>
+
+            <div class="modal-img-wrapper">
+              <figure class="modal-avatar-box">
+                <img src="./assets/images/avatar-1.png" alt="Daniel lewis" width="80" data-modal-img>
+              </figure>
+
+              <img src="./assets/images/icon-quote.svg" alt="quote icon">
+            </div>
+
+            <div class="modal-content">
+
+
+            </div>
+
+          </section>
+
         </div>
-    </header>
 
-    <!-- Sezione Esperienza -->
-    <section id="esperienza" class="section">
-        <div class="container">
-            <h2>Esperienza Lavorativa</h2>
-            <ul>
-                <li><strong>2020 - Presente:</strong> Ingegnere Sistemista presso XYZ Srl</li>
-                <li><strong>2018 - 2020:</strong> Supporto IT presso ABC SpA</li>
-                <li><strong>2017 - 2018:</strong> Stage come Tecnico IT presso DEF Solutions</li>
+
+      </article>
+
+
+
+
+
+      <!--
+        - #RESUME
+      -->
+
+      <article class="resume" data-page="resume">
+
+        <header>
+          <h2 class="h2 article-title">Resume</h2>
+        </header>
+
+        <section class="timeline">
+
+          <div class="title-wrapper">
+            <div class="icon-box">
+              <ion-icon name="book-outline"></ion-icon>
+            </div>
+
+            <h3 class="h3">Percorsi di Studi</h3>
+          </div>
+
+          <ol class="timeline-list">
+
+            <li class="timeline-item">
+
+              <h4 class="h4 timeline-item-title">ITS Academy LAST - System Administrator</h4>
+
+              <span>2024 — IN CORSO</span>
+
+              <p class="timeline-text">
+                Percorso di studi incentrato su gestione di infrastrutture IT e svilluppo Backend.
+              </p>
+
+            </li>
+
+            <li class="timeline-item">
+
+              <h4 class="h4 timeline-item-title">IIS Dal Cero - San bonifacio</h4>
+
+              <span>2019 — 2024</span>
+
+              <p class="timeline-text">
+                Diploma di maturità in informatica.
+              </p>
+
+            </li>
+
+          </ol>
+
+        </section>
+
+        <section class="timeline">
+
+          <div class="title-wrapper">
+            <div class="icon-box">
+              <ion-icon name="book-outline"></ion-icon>
+            </div>
+
+            <h3 class="h3">Esperienza Lavorativa</h3>
+          </div>
+
+          <ol class="timeline-list">
+
+            <li class="timeline-item">
+
+              <h4 class="h4 timeline-item-title">Magazziniere - Arvato, Gennep, Netherlands</h4>
+
+              <span>02/2024 - 06/2024</span>
+
+              <p class="timeline-text">
+                Movimentazione merci utilizzando EPT e gestione delle merci in entrata.
+              </p>
+
+            </li>
+
+            <li class="timeline-item">
+
+              <h4 class="h4 timeline-item-title">Impiegato Ufficio Costumer Care - Infogestweb S.r.l - Sommacampagna, Verona.</h4>
+
+              <span>04/2023 - 01/2024</span>
+
+              <p class="timeline-text">
+                Risoluzione dei problemi, supporto tecnico e soddisfazione dei clienti. Creazione di report personalizzati con query SQL. Basi di meccatronica e test di dispositivi IOT. Utilizzo salesforce per gestire richieste clienti.
+              </p>
+
+            </li>
+
+            <li class="timeline-item">
+
+              <h4 class="h4 timeline-item-title">Operatore Terra Import/Export - Albini & pitigliani S.p.a - Sommacampagna, Verona</h4>
+
+              <span>10/2022 - 03/2023</span>
+
+              <p class="timeline-text">
+                Organizzazione ritiri, spedizione e consegna della merce. Risoluzione dei problemi legati alla spedizione. Contatto diretto clienti e partner esteri.
+              </p>
+
+            </li>
+
+          </ol>
+
+        </section>
+
+        <section class="skill">
+
+          <h3 class="h3 skills-title">My skills</h3>
+
+          <ul class="skills-list content-card">
+
+            <li class="skills-item">
+
+              <div class="title-wrapper">
+                <h5 class="h5">Java</h5>
+                <data value="50">50%</data>
+              </div>
+
+              <div class="skill-progress-bg">
+                <div class="skill-progress-fill" style="width: 50%;"></div>
+              </div>
+
+            </li>
+            <li class="skills-item">
+
+              <div class="title-wrapper">
+                <h5 class="h5">linux</h5>
+                <data value="50">50%</data>
+              </div>
+
+              <div class="skill-progress-bg">
+                <div class="skill-progress-fill" style="width: 50%;"></div>
+              </div>
+
+            </li>
+
+            <li class="skills-item">
+
+              <div class="title-wrapper">
+                <h5 class="h5">Comunicazione</h5>
+                <data value="70">70%</data>
+              </div>
+
+              <div class="skill-progress-bg">
+                <div class="skill-progress-fill" style="width: 70%;"></div>
+              </div>
+
+            </li>
+
+            <li class="skills-item">
+
+              <div class="title-wrapper">
+                <h5 class="h5">Python</h5>
+                <data value="40">40%</data>
+              </div>
+
+              <div class="skill-progress-bg">
+                <div class="skill-progress-fill" style="width: 40%;"></div>
+              </div>
+
+            </li>
+
+            <li class="skills-item">
+
+              <div class="title-wrapper">
+                <h5 class="h5">Spring-boot</h5>
+                <data value="10">10%</data>
+              </div>
+
+              <div class="skill-progress-bg">
+                <div class="skill-progress-fill" style="width: 10%;"></div>
+              </div>
+
+            </li>
+
+          </ul>
+
+        </section>
+
+      </article>
+
+
+
+
+
+      <!--
+        - #PORTFOLIO
+      -->
+
+      <article class="portfolio" data-page="portfolio">
+
+        <header>
+          <h2 class="h2 article-title">Portfolio</h2>
+        </header>
+
+        <section class="projects">
+
+          <ul class="filter-list">
+
+            <li class="filter-item">
+              <button class="active" data-filter-btn>All</button>
+            </li>
+
+            <li class="filter-item">
+              <button data-filter-btn>Web design</button>
+            </li>
+
+            <li class="filter-item">
+              <button data-filter-btn>Applications</button>
+            </li>
+
+            <li class="filter-item">
+              <button data-filter-btn>Web development</button>
+            </li>
+
+          </ul>
+
+          <div class="filter-select-box">
+
+            <button class="filter-select" data-select>
+
+              <div class="select-value" data-selecct-value>Select category</div>
+
+              <div class="select-icon">
+                <ion-icon name="chevron-down"></ion-icon>
+              </div>
+
+            </button>
+
+            <ul class="select-list">
+
+              <li class="select-item">
+                <button data-select-item>All</button>
+              </li>
+
+              <li class="select-item">
+                <button data-select-item>Web design</button>
+              </li>
+
+              <li class="select-item">
+                <button data-select-item>Applications</button>
+              </li>
+
+              <li class="select-item">
+                <button data-select-item>Web development</button>
+              </li>
+
             </ul>
-        </div>
-    </section>
 
-    <!-- Sezione Curriculum -->
-    <section id="curriculum" class="section bg-light">
-        <div class="container">
-            <h2>Il mio Curriculum</h2>
-            <p>Un riassunto delle esperienze professionali, delle competenze e della formazione.</p>
-            <div class="curriculum">
-                <div class="curriculum-item">
-                    <h3>Formazione</h3>
-                    <ul>
-                        <li>Laurea in Informatica - Università XYZ (Anno)</li>
-                        <li>Master in Gestione Infrastrutture IT - Università ABC (Anno)</li>
-                    </ul>
-                </div>
-                <div class="curriculum-item">
-                    <h3>Certificazioni</h3>
-                    <ul>
-                        <li>Certificazione CompTIA Network+ (Anno)</li>
-                        <li>Certificazione Microsoft Certified Solutions Expert (Anno)</li>
-                    </ul>
-                </div>
+          </div>
+
+          <ul class="project-list">
+
+            <li class="project-item  active" data-filter-item data-category="web development">
+              <a href="#">
+
+                <figure class="project-img">
+                  <div class="project-item-icon-box">
+                    <ion-icon name="eye-outline"></ion-icon>
+                  </div>
+
+                  <img src="./assets/images/project-2.png" alt="orizon" loading="lazy">
+                </figure>
+
+                <h3 class="project-title">ERP Project</h3>
+
+                <p class="project-category">Spring Backend - WORK IN PROGRESS</p>
+
+              </a>
+            </li>
+
+
+
+          </ul>
+
+        </section>
+
+      </article>
+
+
+      <!--
+        - #CONTACT
+      -->
+
+      <article class="contact" data-page="contact">
+
+        <header>
+          <h2 class="h2 article-title">Contact</h2>
+        </header>
+
+        <section class="contact-form">
+
+          <h3 class="h3 form-title">Contact Form</h3>
+
+          <form action="https://formsubmit.co/lucascalera1vr@gmail.com" method="POST" class="form" data-form>
+
+            <div class="input-wrapper">
+              <input type="text" name="fullname" class="form-input" placeholder="Full name" required data-form-input>
+
+              <input type="email" name="email" class="form-input" placeholder="Email address" required data-form-input>
             </div>
 
-            <!-- Curriculum Embeddato -->
-            <div class="curriculum-embed">
-                <iframe loading="lazy" src="https://www.canva.com/design/DAGEcuwmzgI/wWIEWkkC8DIPVPk6e6fhXg/view?embed" allowfullscreen="allowfullscreen"></iframe>
-            </div>
-            <a href="https://www.canva.com/design/DAGEcuwmzgI/wWIEWkkC8DIPVPk6e6fhXg/view" target="_blank" rel="noopener">Scarica il Curriculum</a>
-        </div>
-    </section>
+            <textarea name="message" class="form-input" placeholder="Your Message" required data-form-input></textarea>
 
-    <!-- Sezione Competenze -->
-    <section id="competenze" class="section">
-        <div class="container">
-            <h2>Competenze Tecniche</h2>
-            <div class="skills">
-                <div class="skill-item"><i class="fas fa-server"></i> Gestione Server Linux</div>
-                <div class="skill-item"><i class="fas fa-network-wired"></i> Amministrazione Reti</div>
-                <div class="skill-item"><i class="fas fa-shield-alt"></i> Sicurezza Informatica</div>
-                <div class="skill-item"><i class="fas fa-cogs"></i> Automazione IT</div>
-            </div>
-        </div>
-    </section>
+            <button class="form-btn" type="submit" disabled data-form-btn>
+              <ion-icon name="paper-plane"></ion-icon>
+              <span>Send Message</span>
+            </button>
+            <input type="hidden" name="_captcha" value="false">
+            <input type="hidden" name="_next" value="https://lucascalera55.github.io/personal_portfolio">
 
-    <!-- Sezione Informazioni -->
-    <section id="informazioni" class="section bg-light">
-        <div class="container">
-            <h2>Informazioni Personali</h2>
-            <p>Sono un sistemista appassionato di tecnologia, automazione e sicurezza. Progetto e gestisco infrastrutture IT sicure ed efficienti.</p>
-        </div>
-    </section>
+          </form>
 
-    <!-- Sezione Contatti -->
-    <section id="contatti" class="section">
-        <div class="container">
-            <h2>Contattami</h2>
-            <form action="https://formsubmit.co/lucascalera1vr@gmail.com" method="POST">
-                <input type="hidden" name="_captcha" value="false">
-                <label for="nome">Nome:</label>
-                <input type="text" id="nome" name="nome" required>
-                <label for="email">Email:</label>
-                <input type="email" id="email" name="email" required>
-                <label for="messaggio">Messaggio:</label>
-                <textarea id="messaggio" name="messaggio" required></textarea>
-                <button type="submit">Invia</button>
-            </form>
-        </div>
-    </section>
+        </section>
 
-    <!-- Footer -->
-    <footer>
-        <p>&copy; 2025 Portfolio Sistemista. Tutti i diritti riservati.</p>
-    </footer>
+      </article>
 
-    <script src="script.js"></script>
+    </div>
+</main>
+<!-- Popup Modal -->
+<div id="popupModal" class="popup-modal">
+  <div class="popup-content">
+    <span class="close-btn" id="closePopup">&times;</span>
+    <p>Thank you for your message! We will get back to you soon.</p>
+  </div>
+</div>
+
+  <!--
+    - custom js link
+  -->
+  <script src="./assets/js/script.js"></script>
+
+  <!--
+    - ionicon link
+  -->
+  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
 
 </body>
+
 </html>
