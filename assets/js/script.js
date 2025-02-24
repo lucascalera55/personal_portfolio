@@ -1,35 +1,40 @@
 "use strict";
 
-// Funzione per attivare/disattivare classi
-const elementToggleFunc = (elem) => elem.classList.toggle("active");
+// Funzione per alternare la classe "active" sugli elementi
+const elementToggleFunc = function (elem) {
+  elem.classList.toggle("active");
+};
 
-// Variabili per la sidebar
+// Variabili per la gestione della barra laterale (sidebar)
 const sidebar = document.querySelector("[data-sidebar]");
 const sidebarBtn = document.querySelector("[data-sidebar-btn]");
 
-// Funzionalità di toggle per la sidebar su mobile
-sidebarBtn.addEventListener("click", () => elementToggleFunc(sidebar));
+// Gestione della barra laterale su dispositivi mobili (toggle)
+sidebarBtn.addEventListener("click", function () {
+  elementToggleFunc(sidebar);
+});
 
-// Variabili per le testimonianze
+// Variabili per la gestione dei testimoni (testimonial)
 const testimonialsItem = document.querySelectorAll("[data-testimonials-item]");
 const modalContainer = document.querySelector("[data-modal-container]");
 const modalCloseBtn = document.querySelector("[data-modal-close-btn]");
 const overlay = document.querySelector("[data-overlay]");
 
-// Variabili per il modal
+// Variabili per il contenuto del modal
 const modalImg = document.querySelector("[data-modal-img]");
 const modalTitle = document.querySelector("[data-modal-title]");
 const modalText = document.querySelector("[data-modal-text]");
 
-// Funzione per attivare/disattivare il modal
-const testimonialsModalFunc = () => {
+// Funzione per alternare la visualizzazione del modal
+const testimonialsModalFunc = function () {
   modalContainer.classList.toggle("active");
   overlay.classList.toggle("active");
 };
 
-// Event listener per ogni testimonianza
-testimonialsItem.forEach((item) => {
-  item.addEventListener("click", function () {
+// Aggiungiamo un evento di click su ogni elemento di testimonianza (testimonial)
+for (let i = 0; i < testimonialsItem.length; i++) {
+  testimonialsItem[i].addEventListener("click", function () {
+    // Imposta l'immagine, il titolo e il testo del modal
     modalImg.src = this.querySelector("[data-testimonials-avatar]").src;
     modalImg.alt = this.querySelector("[data-testimonials-avatar]").alt;
     modalTitle.innerHTML = this.querySelector(
@@ -39,50 +44,76 @@ testimonialsItem.forEach((item) => {
       "[data-testimonials-text]"
     ).innerHTML;
 
+    // Mostra il modal
     testimonialsModalFunc();
   });
-});
+}
 
-// Event listener per chiusura modal
+// Aggiungiamo l'evento per chiudere il modal
 modalCloseBtn.addEventListener("click", testimonialsModalFunc);
 overlay.addEventListener("click", testimonialsModalFunc);
 
-// Variabili per il filtro personalizzato
+// Variabili per la gestione della selezione del filtro (Custom Select)
 const select = document.querySelector("[data-select]");
 const selectItems = document.querySelectorAll("[data-select-item]");
-const selectValue = document.querySelector("[data-select-value]");
+const selectValue = document.querySelector("[data-selecct-value]");
 const filterBtn = document.querySelectorAll("[data-filter-btn]");
 
-// Toggle del menu select
-select.addEventListener("click", () => elementToggleFunc(select));
-
-// Event listener per gli elementi della select
-selectItems.forEach((item) => {
-  item.addEventListener("click", function () {
-    const selectedValue = this.innerText.toLowerCase();
-    selectValue.innerText = this.innerText;
-    elementToggleFunc(select);
-    filterFunc(selectedValue);
-  });
+// Gestione del click sul custom select (per mostrare/nascondere il menu)
+select.addEventListener("click", function () {
+  elementToggleFunc(this);
 });
 
-// Variabili per il filtro
+// Aggiungiamo un evento su ogni elemento della lista del filtro
+for (let i = 0; i < selectItems.length; i++) {
+  selectItems[i].addEventListener("click", function () {
+    let selectedValue = this.innerText.toLowerCase();
+    selectValue.innerText = this.innerText;
+    elementToggleFunc(select);
+    filterFunc(selectedValue); // Applica il filtro selezionato
+  });
+}
+
+// Variabili per gli elementi da filtrare
 const filterItems = document.querySelectorAll("[data-filter-item]");
 
-const filterFunc = (selectedValue) => {
-  filterItems.forEach((item) => {
-    item.classList.toggle(
-      "active",
-      selectedValue === "all" || selectedValue === item.dataset.category
-    );
-  });
+// Funzione di filtro per visualizzare/nascondere gli elementi in base alla selezione
+const filterFunc = function (selectedValue) {
+  for (let i = 0; i < filterItems.length; i++) {
+    if (selectedValue === "all") {
+      filterItems[i].classList.add("active");
+    } else if (selectedValue === filterItems[i].dataset.category) {
+      filterItems[i].classList.add("active");
+    } else {
+      filterItems[i].classList.remove("active");
+    }
+  }
+
+  // Gestione della visualizzazione dell'iframe del curriculum in base al filtro selezionato
+  const curriculumItems = document.querySelectorAll(
+    "[data-category='curriculum']"
+  );
+  const allItems = document.querySelectorAll("[data-category='all']");
+
+  // Mostra l'iframe del curriculum solo quando viene selezionato "Curriculum"
+  if (selectedValue === "curriculum") {
+    curriculumItems.forEach((item) => (item.style.display = "block"));
+    allItems.forEach((item) => (item.style.display = "none"));
+  } else if (selectedValue === "all") {
+    curriculumItems.forEach((item) => (item.style.display = "none"));
+    allItems.forEach((item) => (item.style.display = "block"));
+  } else {
+    // Se un altro filtro viene selezionato, nasconde l'iframe del curriculum
+    curriculumItems.forEach((item) => (item.style.display = "none"));
+  }
 };
 
-// Gestione bottoni di filtro per schermi grandi
+// Aggiungi l'evento per ogni pulsante di filtro su dispositivi di grandi dimensioni
 let lastClickedBtn = filterBtn[0];
-filterBtn.forEach((btn) => {
-  btn.addEventListener("click", function () {
-    const selectedValue = this.innerText.toLowerCase();
+
+for (let i = 0; i < filterBtn.length; i++) {
+  filterBtn[i].addEventListener("click", function () {
+    let selectedValue = this.innerText.toLowerCase();
     selectValue.innerText = this.innerText;
     filterFunc(selectedValue);
 
@@ -90,61 +121,64 @@ filterBtn.forEach((btn) => {
     this.classList.add("active");
     lastClickedBtn = this;
   });
-});
+}
 
-// Variabili per il form di contatto
+// Variabili per il modulo di contatto
 const form = document.querySelector("[data-form]");
 const formInputs = document.querySelectorAll("[data-form-input]");
 const formBtn = document.querySelector("[data-form-btn]");
 
-// Validazione del form
-formInputs.forEach((input) => {
-  input.addEventListener("input", () => {
-    formBtn.disabled = !form.checkValidity();
+// Aggiungiamo un evento per ogni campo di input del modulo
+for (let i = 0; i < formInputs.length; i++) {
+  formInputs[i].addEventListener("input", function () {
+    // Verifica se il modulo è valido
+    if (form.checkValidity()) {
+      formBtn.removeAttribute("disabled");
+    } else {
+      formBtn.setAttribute("disabled", "");
+    }
   });
-});
+}
 
-// Variabili per la navigazione della pagina
+// Variabili per la navigazione delle pagine
 const navigationLinks = document.querySelectorAll("[data-nav-link]");
 const pages = document.querySelectorAll("[data-page]");
 
-// Event listener per la navigazione
-navigationLinks.forEach((link) => {
-  link.addEventListener("click", function () {
-    pages.forEach((page, index) => {
-      const isActive =
-        this.textContent.trim().toLowerCase() === page.dataset.page;
-      page.classList.toggle("active", isActive);
-      navigationLinks[index].classList.toggle("active", isActive);
-    });
-
-    window.scrollTo(0, 0);
+// Aggiungiamo l'evento di click su ogni link di navigazione
+for (let i = 0; i < navigationLinks.length; i++) {
+  navigationLinks[i].addEventListener("click", function () {
+    for (let i = 0; i < pages.length; i++) {
+      if (this.innerHTML.toLowerCase() === pages[i].dataset.page) {
+        pages[i].classList.add("active");
+        navigationLinks[i].classList.add("active");
+        window.scrollTo(0, 0);
+      } else {
+        pages[i].classList.remove("active");
+        navigationLinks[i].classList.remove("active");
+      }
+    }
   });
-});
+}
 
-// Gestione popup del form
-document.addEventListener("DOMContentLoaded", () => {
+document.addEventListener("DOMContentLoaded", function () {
+  const form = document.querySelector("form[data-form]");
   const popupModal = document.getElementById("popupModal");
   const closePopup = document.getElementById("closePopup");
 
-  form.addEventListener("submit", (event) => {
-    event.preventDefault();
-    popupModal.style.display = "block";
+  form.addEventListener("submit", function (event) {
+    event.preventDefault(); // Prevenire l'invio del modulo
+    popupModal.style.display = "block"; // Mostra il popup
   });
 
-  closePopup.addEventListener("click", () => {
-    popupModal.style.display = "none";
-    if (form.checkValidity()) {
-      form.submit();
-    }
+  closePopup.addEventListener("click", function () {
+    popupModal.style.display = "none"; // Chiudi il popup
+    form.submit(); // Invia il modulo dopo la chiusura del popup
   });
 
-  window.addEventListener("click", (event) => {
-    if (event.target === popupModal) {
-      popupModal.style.display = "none";
-      if (form.checkValidity()) {
-        form.submit();
-      }
+  window.addEventListener("click", function (event) {
+    if (event.target == popupModal) {
+      popupModal.style.display = "none"; // Chiudi il popup se si clicca fuori
+      form.submit(); // Invia il modulo dopo la chiusura del popup
     }
   });
 });
