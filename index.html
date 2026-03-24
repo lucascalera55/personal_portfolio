@@ -8,7 +8,6 @@
   <title>Luca Scalera - Personal Portfolio</title>
 
   <link rel="shortcut icon" href="./assets/images/logo.ico" type="image/x-icon">
-
   <link rel="stylesheet" href="./assets/css/style.css">
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -21,7 +20,6 @@
   <main>
 
     <aside class="sidebar" data-sidebar>
-
       <div class="sidebar-info">
         <figure class="avatar-box">
           <img src="./assets/images/my-avatar.png" alt="Luca Scalera" width="80">
@@ -40,42 +38,30 @@
 
       <div class="sidebar-info_more">
         <div class="separator"></div>
-
         <ul class="contacts-list">
           <li class="contact-item">
-            <div class="icon-box">
-              <ion-icon name="mail-outline"></ion-icon>
-            </div>
+            <div class="icon-box"><ion-icon name="mail-outline"></ion-icon></div>
             <div class="contact-info">
               <p class="contact-title">Email</p>
               <a href="mailto:lucascalera1vr@gmail.com" class="contact-link">lucascalera1vr@gmail.com</a>
             </div>
           </li>
-
           <li class="contact-item">
-            <div class="icon-box">
-              <ion-icon name="phone-portrait-outline"></ion-icon>
-            </div>
+            <div class="icon-box"><ion-icon name="phone-portrait-outline"></ion-icon></div>
             <div class="contact-info">
               <p class="contact-title">Telefono</p>
               <a href="tel:+393892680373" class="contact-link">+39 389 268 0373</a>
             </div>
           </li>
-
           <li class="contact-item">
-            <div class="icon-box">
-              <ion-icon name="calendar-outline"></ion-icon>
-            </div>
+            <div class="icon-box"><ion-icon name="calendar-outline"></ion-icon></div>
             <div class="contact-info">
               <p class="contact-title">Data di nascita</p>
               <time datetime="2005-06-02">02/06/2005</time>
             </div>
           </li>
-
           <li class="contact-item">
-            <div class="icon-box">
-              <ion-icon name="location-outline"></ion-icon>
-            </div>
+            <div class="icon-box"><ion-icon name="location-outline"></ion-icon></div>
             <div class="contact-info">
               <p class="contact-title">Indirizzo</p>
               <address>Colognola ai Colli, 37030, Verona</address>
@@ -84,21 +70,15 @@
         </ul>
 
         <div class="separator"></div>
-
         <ul class="social-list">
           <li class="social-item">
-            <a href="https://github.com/lucascalera55/" class="social-link" target="_blank">
-              <ion-icon name="logo-github"></ion-icon>
-            </a>
+            <a href="https://github.com/lucascalera55/" class="social-link" target="_blank"><ion-icon name="logo-github"></ion-icon></a>
           </li>
           <li class="social-item">
-            <a href="https://www.linkedin.com/in/luca-scalera-40a948337/" class="social-link" target="_blank">
-              <ion-icon name="logo-linkedin"></ion-icon>
-            </a>
+            <a href="https://www.linkedin.com/in/luca-scalera-40a948337/" class="social-link" target="_blank"><ion-icon name="logo-linkedin"></ion-icon></a>
           </li>
         </ul>
       </div>
-
     </aside>
 
     <div class="main-content">
@@ -113,10 +93,7 @@
       </nav>
 
       <article class="about active" data-page="about">
-        <header>
-          <h2 class="h2 article-title">About me</h2>
-        </header>
-
+        <header><h2 class="h2 article-title">About me</h2></header>
         <section class="about-text">
           <p>Mi chiamo Luca Scalera, ho 20 anni e sono sempre stato appassionato di informatica sin da bambino.</p>
           <p>Mi sono diplomato in informatica. Successivamente, ho deciso di intraprendere un corso ITS su System Administrator presso l'ITS Academy LAST.</p>
@@ -136,7 +113,7 @@
               <div class="service-icon-box"><img src="./assets/images/icon-quote.png" alt="games icon" width="40"></div>
               <div class="service-content-box">
                 <h4 class="h4 service-item-title">Videogiochi</h4>
-                <p class="service-item-text">Gioco a vari videogiochi da anni, grazie a questo ho imparato a lavorare in team e a relazionarmi con la tecnologia.</p>
+                <p class="service-item-text">Gioco a vari videogiochi da anni, ho imparato a lavorare in team e a relazionarmi con la tecnologia.</p>
               </div>
             </li>
             <li class="service-item">
@@ -155,13 +132,22 @@
             </li>
           </ul>
         </section>
+
+        <div class="modal-container" data-modal-container>
+          <div class="overlay" data-overlay></div>
+          <section class="testimonials-modal">
+            <button class="modal-close-btn" data-modal-close-btn><ion-icon name="close-outline"></ion-icon></button>
+            <div class="modal-img-wrapper">
+              <figure class="modal-avatar-box"><img src="./assets/images/my-avatar.png" alt="Luca Scalera" width="80" data-modal-img></figure>
+              <img src="./assets/images/icon-quote.svg" alt="quote icon">
+            </div>
+            <div class="modal-content"><div data-modal-title></div><div data-modal-text></div></div>
+          </section>
+        </div>
       </article>
 
       <article class="resume" data-page="resume">
-        <header>
-          <h2 class="h2 article-title">Resume</h2>
-        </header>
-
+        <header><h2 class="h2 article-title">Resume</h2></header>
         <section class="timeline">
           <div class="title-wrapper">
             <div class="icon-box"><ion-icon name="book-outline"></ion-icon></div>
@@ -171,31 +157,12 @@
             <li class="timeline-item">
               <h4 class="h4 timeline-item-title">ITS Academy LAST - System Administrator</h4>
               <span>2024 — IN CORSO</span>
-              <p class="timeline-text">Percorso di studi incentrato su gestione di infrastrutture IT e sviluppo Backend.</p>
+              <p class="timeline-text">Gestione infrastrutture IT e sviluppo Backend.</p>
             </li>
             <li class="timeline-item">
-              <h4 class="h4 timeline-item-title">ISISS M.O. Luciano Dal Cero - San Bonifacio</h4>
+              <h4 class="h4 timeline-item-title">ISISS M.O. Luciano Dal Cero</h4>
               <span>2019 — 2024</span>
               <p class="timeline-text">Diploma di maturità in informatica.</p>
-            </li>
-          </ol>
-        </section>
-
-        <section class="timeline">
-          <div class="title-wrapper">
-            <div class="icon-box"><ion-icon name="briefcase-outline"></ion-icon></div>
-            <h3 class="h3">Esperienza Lavorativa</h3>
-          </div>
-          <ol class="timeline-list">
-            <li class="timeline-item">
-              <h4 class="h4 timeline-item-title">Stage Uteco Converting S.p.A.</h4>
-              <span>01/2024 - 01/2024</span>
-              <p class="timeline-text">Storage fili, montaggio PC, configurazione dominio, Office Automation con Power Automate.</p>
-            </li>
-            <li class="timeline-item">
-              <h4 class="h4 timeline-item-title">Stage RTC S.p.A.</h4>
-              <span>05/2025 - 07/2025</span>
-              <p class="timeline-text">Assistenza IT (ManageEngine, Veeam, eWON). Sviluppo script per automazione industriale.</p>
             </li>
           </ol>
         </section>
@@ -248,7 +215,7 @@
                 <figure class="project-img">
                   <div class="project-item-icon-box"><ion-icon name="eye-outline"></ion-icon></div>
                   <div style="position: relative; width: 100%; height: 0; padding-top: 141.4286%; overflow: hidden; border-radius: 12px;">
-                    <iframe loading="lazy" style="position: absolute; width: 100%; height: 100%; top: 0; left: 0; border: none;" src="https://www.canva.com/design/DAGEcuwmzgI/wWIEWkkC8DIPVPk6e6fhXg/view?embed"></iframe>
+                    <iframe src="https://www.canva.com/design/DAGEcuwmzgI/wWIEWkkC8DIPVPk6e6fhXg/view?embed" style="position: absolute; width: 100%; height: 100%; top: 0; left: 0; border: none;"></iframe>
                   </div>
                 </figure>
                 <h3 class="project-title">Curriculum Vitae Luca Scalera</h3>
@@ -273,7 +240,6 @@
               <ion-icon name="paper-plane"></ion-icon>
               <span>Send Message</span>
             </button>
-            <input type="hidden" name="_captcha" value="false">
           </form>
         </section>
       </article>
@@ -284,6 +250,6 @@
   <script src="./assets/js/script.js"></script>
   <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
   <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
-</body>
 
+</body>
 </html>
