@@ -555,7 +555,7 @@
   .service-item-text {
     color: var(--light-gray);
     font-size: var(--fs-6);
-    font-weight: var(--fw-3);
+    font-weight: var(--fw-300);
     line-height: 1.6;
   }
   
@@ -1885,7 +1885,7 @@
   .popup-modal {
     display: none;
     position: fixed;
-    z-index: 1;
+    z-index: 9999;
     left: 0;
     top: 0;
     width: 100%;
@@ -1915,7 +1915,7 @@
   
   .close-btn:hover,
   .close-btn:focus {
-    color: black;
+    color: var(--orange-yellow-crayola);
     text-decoration: none;
     cursor: pointer;
   }
